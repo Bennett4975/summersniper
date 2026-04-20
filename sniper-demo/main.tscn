@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nwljasqn2yq"]
 
 [ext_resource type="PackedScene" uid="uid://cx4jjws0a7vv6" path="res://Scenes/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c03hhbywlmhkf" path="res://Scenes/sniper.tscn" id="2_0xm2m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -524,3 +525,6 @@ size = Vector3(10.2, 2.5, 0.5)
 
 [node name="Player" parent="." unique_id=616664080 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4958184, 13.0869)
+
+[node name="Sniper" parent="." unique_id=2089680053 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4.830902, -63.600002)

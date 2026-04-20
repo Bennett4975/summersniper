@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://c03hhbywlmhkf"]
 
-[ext_resource type="Script" uid="uid://d10hssh4m1blu" path="res://Scripts/sniper.gd" id="1_wawhk"]
+[ext_resource type="Script" uid="uid://xptspkore3s5" path="res://Scenes/sniper.gd" id="1_wawhk"]
+[ext_resource type="PackedScene" uid="uid://0geffh7jbdjb" path="res://Scenes/bullet.tscn" id="2_046dc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_nf8xu"]
 
 [node name="Sniper" type="Node3D" unique_id=2089680053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8309023, 0)
 script = ExtResource("1_wawhk")
+bullet_scene = ExtResource("2_046dc")
+bullet_speed = 200.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1231844417]
 mesh = SubResource("CapsuleMesh_nf8xu")
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=900966235]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20046914, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4995308, 0)
+target_position = Vector3(0, 0, -100)
+
+[node name="Muzzle" type="Marker3D" parent="." unique_id=580147899]
